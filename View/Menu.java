@@ -127,6 +127,7 @@ public class Menu {
                             System.out.println("2. Create notification");
                             System.out.println("3. Manage courses");
                             System.out.println("4. Show teaching timetable");
+                            System.out.println("5. Change password");
                             System.out.println("0. Log out");
                             System.out.print("Choose an option: ");
 
@@ -237,7 +238,9 @@ public class Menu {
                                     System.out.println("Displaying teaching timetable:");
                                     courseServices.showTimeTableForTeacher(teacher);
                                     break;
-
+                                case 5:
+                                    accountServices.changePassword(account);
+                                    break;
                                 default:
                                     System.out.println("Invalid option. Please try again.");
                                     break;
@@ -256,6 +259,7 @@ public class Menu {
                         System.out.println("1. View notifications");
                         System.out.println("2. View courses");
                         System.out.println("3. View Timetable");
+                        System.out.println("4. Change password");
 
                         int studentOption = Integer.parseInt(scanner.nextLine());
                         switch (studentOption) {
@@ -280,6 +284,9 @@ public class Menu {
                             case 3:
                                 courseServices.showTimeTableForStudent(student);
                                 break;
+                            case 4:
+                                accountServices.changePassword(account);
+                                break;
                             default:
                                 System.out.println("Invalid option");
                                 break;
@@ -297,6 +304,7 @@ public class Menu {
                     System.out.println("0. Log out");
                     System.out.println("1. View child's score");
                     System.out.println("2. View child's timetable");
+                    System.out.println("3. Change password");
 
                     int parentOption = Integer.parseInt(scanner.nextLine());
                     switch (parentOption) {
@@ -324,6 +332,8 @@ public class Menu {
                                 System.out.println("Could not find child.");
                             }
                             break;
+                        case 3:
+                            accountServices.changePassword(account);
                         default:
                             System.out.println("Invalid option");
                             break;
