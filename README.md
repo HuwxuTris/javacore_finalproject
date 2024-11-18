@@ -19,7 +19,7 @@ Teacher, Student and Parent
 - Parent :
 1. view child's timetable
 2. view child's scores
-Account:
+- Account:
 There are changing account info once created. 
 
 
